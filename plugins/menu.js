@@ -25,10 +25,11 @@ llı *INFO BOT*
 ⬡ Database: %rtotalreg dari %totalreg 
 ⬡ Memory Used :  *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB* 
 %readmore`.trim(),
-  header: `˚₊· ͟͟͞͞%category ͟͟͞͞₊·˚`, 
-   body: '⸙͎۪۫  %cmd %islimit %isPremium', 
-   footer: '\n', 
-   after: `*⌕ %me@^%version*
+  header: '╭─㉿ 〔 ⚚ *%category* ⚚ 〕 ㉿─\n┃',
+  body: '┃々 %cmd %islimit %isPremium',
+  footer: '┃\n╰────────㉿\n', 
+  after: `
+⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❙❘❙❙❘❙❘❙❚❙❘❙❙❙❘❙❘❙❚❙❘❙❚❙❘❙❙❘❙❚❙❘ ⌕.
 ${'```%npmdesc```'}
  `,
 }
@@ -394,7 +395,7 @@ return conn.send3ButtonLoc(m.chat, await conn.resize(pickRandom(global.waifu), 
        readmore: readMore 
      } 
      text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name]) 
-     //await conn.reply(m.chat, '*L o a d i n g . . .*', fload) 
+      await conn.reply(m.chat, '*L o a d i n g . . .*', fload) 
  
    /*await conn.send2ButtonImg(m.chat, await (await fetch('https://api.xteam.xyz/textpro/glitch?text=' + teks + '&text2=Raa%20Botz-MD%20BY%20Claraa%20Chan&APIKEY=bf8ff984af1506b7')).buffer(), text.trim(), hao, 'Donasi', '.donasi', 'Rules', '.rules', m, { 
      quoted: ftoko, 
